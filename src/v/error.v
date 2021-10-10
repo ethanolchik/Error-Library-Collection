@@ -79,11 +79,7 @@ pub mut:
 	msg 		string
 	submsg		string
 	hint 		string
-	ecode		Code
-}
-
-pub struct Code {
-	code	string
+	ecode		string
 }
 
 pub struct Location {
@@ -107,7 +103,7 @@ pub fn (e OError) display() {
 		println("  |")
 	}
 
-	println("  ╰- " + fg(style("Hint: ", "bold"), "cyan") + "Use olang --explain=${e.ecode.code}")
+	println("  ╰- " + fg(style("Hint: ", "bold"), "cyan") + "Use olang --explain=${e.ecode}")
 
 	exit(-1)
 }
